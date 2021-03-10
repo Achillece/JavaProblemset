@@ -2,35 +2,35 @@ package test;
 
 public class Sorts {
 	public static int[] InsertSort(int[] nums){
-		for(int i=1;i<nums.length;i++){
-			int mark=nums[i];
+		for(int i = 1; i < nums.length; i++){
+			int mark = nums[i];
 			int m;
-			for(m=i-1;m>=0&&nums[m]>mark;m--){
-				nums[m+1]=nums[m];
+			for(m = i - 1; m >= 0 && nums[m] > mark; m--){
+				nums[m+1] = nums[m];
 			}
-			nums[m+1]=mark;
+			nums[m+1] = mark;
 		}
 		return nums;
 	}
 	public static int[] BubbleSort(int[] nums){
-		boolean needNextPass=true;
-		for(int k=1;k<nums.length&&needNextPass;k++){
-			needNextPass=false;
-			for(int i=0;i<nums.length-k;i++){
-				if(nums[i]>nums[i+1]){
-					int temp=nums[i];
-					nums[i]=nums[i+1];
-					nums[i+1]=temp;
-					needNextPass=true;
+		boolean needNextPass = true;
+		for(int k = 1; k < nums.length && needNextPass; k++){
+			needNextPass = false;
+			for(int i = 0; i < nums.length-k; i++){
+				if(nums[i] > nums[i + 1]){
+					int temp = nums[i];
+					nums[i] = nums[i + 1];
+					nums[i + 1] = temp;
+					needNextPass = true;
 				}
 			}
 		}
 		return nums;
 	}
 	public static void MergeSort(int[] nums){
-		int len=nums.length;
-		if(len>1){
-			int[] firstHalf=new int[len/2];
+		int len = nums.length;
+		if(len > 1){
+			int[] firstHalf = new int[len/2];
 			System.arraycopy(nums, 0, firstHalf, 0, len/2);
 			MergeSort(firstHalf);
 			
@@ -42,43 +42,43 @@ public class Sorts {
 	}
 	public static void merge(int[] first,int[] second,int[] temp){
 		int a=0,b=0,c=0;
-		while(a<first.length&&b<second.length){
-			temp[c++]=(first[a]>second[b])?second[b++]:first[a++];
+		while(a < first.length && b < second.length){
+			temp[c++] = (first[a]>second[b]) ? second[b++] : first[a++];
 		}
-		while(a<first.length){
-			temp[c++]=first[a++];
+		while(a < first.length){
+			temp[c++] = first[a++];
 			}
-		while(b<second.length){
-			temp[c++]=second[b++];
+		while(b < second.length){
+			temp[c++] = second[b++];
 			}
 	}
 	public static void QuickSort(int[] nums){
-		QuickSort(nums,0,nums.length-1);
+		QuickSort(nums, 0, nums.length-1);
 	}
-	public static void QuickSort(int[] nums,int first,int last){
-		if(last>first){
-			int pivotIndex=partition(nums,first,last);
-			QuickSort(nums,first,pivotIndex-1);
-			QuickSort(nums,pivotIndex+1,last);
+	public static void QuickSort(int[] nums, int first, int last){
+		if(last > first){
+			int pivotIndex=partition(nums, first, last);
+			QuickSort(nums, first, pivotIndex - 1);
+			QuickSort(nums, pivotIndex + 1, last);
 		}
 	}
-	public static int partition(int[] nums,int first,int last){
-		int pivot=nums[first];
-		int low=first+1;
-		int high=last;
-		while(high>low){
-			while(low<=high&&nums[low]<=pivot)low++;
-			while(low<=high&&nums[high]>pivot)high--;
-			if(high>low){
-				int temp=nums[high];
-				nums[high]=nums[low];
-				nums[low]=temp;
+	public static int partition(int[] nums, int first, int last){
+		int pivot = nums[first];
+		int low = first + 1;
+		int high = last;
+		while(high > low){
+			while(low <= high && nums[low] <= pivot) low++;
+			while(low <= high && nums[high] > pivot) high--;
+			if(high > low){
+				int temp = nums[high];
+				nums[high] = nums[low];
+				nums[low] = temp;
 			}
 		}
-		while(high>first&&nums[high]>=pivot)high--;
-		if(pivot>nums[high]){
-			nums[first]=nums[high];
-			nums[high]=pivot;
+		while(high > first && nums[high] >= pivot) high--;
+		if(pivot > nums[high]){
+			nums[first] = nums[high];
+			nums[high] = pivot;
 			return high;
 		}else{
 			return first;
@@ -147,7 +147,7 @@ public class Sorts {
 		// TODO Auto-generated method stub
 		int[] nums={12,3,41,12,34,2,3,9,0,54,13,-1,-2,32,-21,-2};
 		//InsertSort(nums);
-		//BubbleSort(nums);
+		BubbleSort(nums);
 		//MergeSort(nums);
 		//QuickSort(nums);
 		//HeapSort(nums);

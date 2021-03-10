@@ -11,13 +11,15 @@ public class LongestSubstring {
                 while(sub.charAt(m)!=s.charAt(i)) m++;
                 if(a>num)
                     num=a;
-                sub=sub.substring(m+1)+s.charAt(i);a=sub.length();
+                sub=sub.substring(m+1)+s.charAt(i);
+                a=sub.length();
             }else{
                 sub+=s.charAt(i);
                 a++;
             }
                 
-        }if(a>num) num=a;
+        }
+        if(a>num) num=a;
         return num;
     }
 	public static void main(String[] args) {
