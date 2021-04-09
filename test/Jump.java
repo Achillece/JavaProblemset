@@ -1,5 +1,5 @@
 package test;
-
+//no.45
 public class Jump {
 	public static int jump(int[] nums) {
 		int length = nums.length;
@@ -17,7 +17,7 @@ public class Jump {
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] a={2,3,1,1,4};
+		int[] a={3,2,1,0,4};
 		System.out.println(jump(a));
 		
 	}
