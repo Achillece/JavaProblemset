@@ -1,5 +1,5 @@
 package test;
-
+//no.152
 public class MaxProduct {
 	public int maxProduct(int[] nums) {
         int max = Integer.MIN_VALUE, imax = 1, imin = 1;
@@ -14,7 +14,9 @@ public class MaxProduct {
     }
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		int a[] = {2,3,2,-4,6,4};
+		MaxProduct maxProduct=new MaxProduct();
+		System.out.println(maxProduct.maxProduct(a));
 	}
 
 }

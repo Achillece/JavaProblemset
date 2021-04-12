@@ -1,11 +1,10 @@
 package test;
-
+//no.56
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 
-//no.56
 public class MergeInterval {
 	public int[][] merge(int[][] intervals) {
         if (intervals.length == 0) {
