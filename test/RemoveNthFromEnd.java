@@ -1,5 +1,5 @@
 package test;
-import test.ListNode;
+import struct.ListNode;	
 
 public class RemoveNthFromEnd {
 	public static ListNode removeNthFromEnd(ListNode head, int n) {

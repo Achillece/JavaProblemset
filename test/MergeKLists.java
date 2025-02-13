@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;*/
 
-import test.ListNode;
+import struct.ListNode;
 public class MergeKLists {
 	 /*public ListNode mergeKLists(ListNode[] lists) {
 		List<Integer> array=new ArrayList<>();

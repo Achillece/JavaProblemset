@@ -1,5 +1,5 @@
 package test;
-import test.ListNode;
+import struct.ListNode;
 public class ReverseKGroup {
 	public static ListNode reverseKGroup(ListNode head, int k) {
 		int n=k;

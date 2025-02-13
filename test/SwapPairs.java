@@ -1,5 +1,5 @@
 package test;
-import test.ListNode;
+import struct.ListNode;
 public class SwapPairs {
 	public ListNode swapPairs(ListNode head) {
 		return resuce(head, head.next);
