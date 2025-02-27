@@ -1,3 +1,5 @@
+package test;
+
 /*
  * @lc app=leetcode.cn id=905 lang=java
  * @lcpr version=30204

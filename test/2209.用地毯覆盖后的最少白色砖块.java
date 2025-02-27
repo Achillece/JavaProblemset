@@ -1,3 +1,5 @@
+package test;
+
 /*
  * @lc app=leetcode.cn id=2209 lang=java
  * @lcpr version=30204
@@ -12,7 +14,7 @@
 // @lc code=start
 class Solution {
     public int minimumWhiteTiles(String floor, int numCarpets, int carpetLen) {
-        
+        return 0;
     }
 }
 // @lc code=end

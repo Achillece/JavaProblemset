@@ -17,7 +17,6 @@ public class Solution {
         return result;
     } 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		int[] nums={1,7,0,13};
 		int target=9;
 		result=twoSum(nums,target);
